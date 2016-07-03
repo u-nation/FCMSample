@@ -19,8 +19,22 @@ android {
     }
 }
 
+ext {
+    supportLibraryVersion = '24.0.0'
+    playServicesVersion = '9.2.0'
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    /*Android SDK*/
+    compile "com.android.support:support-annotations:$supportLibraryVersion"
+    compile "com.android.support:support-v4:$supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    /*push*/
+    compile "com.google.firebase:firebase-messaging:$playServicesVersion"
+    /*Log*/
+    compile 'com.jakewharton.timber:timber:4.1.0'
 }
+// ADD THIS AT THE BOTTOM  https://firebase.google.com/docs/android/setup#add_firebase_to_your_app
+apply plugin: 'com.google.gms.google-services'

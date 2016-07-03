@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FCMSample</string>
+    <string name="firebase">Firebase!</string>
 </resources>
